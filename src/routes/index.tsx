@@ -56,65 +56,61 @@ function Index() {
           fetchPriority="high"
           decoding="async"
           loading="eager"
-          className="absolute inset-0 h-full w-full object-cover opacity-35"
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/90 via-ink/75 to-ink" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/95 via-ink/85 to-ink" />
 
         <div className="relative mx-auto max-w-7xl px-5 pt-16 pb-20 sm:pt-24 sm:pb-28 lg:px-8">
-          <div className="lg:grid lg:grid-cols-12 lg:gap-12 lg:items-center">
-            {/* Left Column: Editorial Value Proposition & Actions */}
+          <div className="lg:grid lg:grid-cols-12 lg:gap-14 lg:items-center">
+            {/* Left Column: Soft Luxury Editorial Presentation */}
             <div className="text-center lg:text-left lg:col-span-7">
-              {/* Premium Pill Badge */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3.5 py-1.5 backdrop-blur-md">
-                <span className="size-2 rounded-full bg-gold animate-pulse" />
-                <span className="text-xs font-semibold tracking-wider uppercase text-gold">
-                  Elite Wealth &amp; Insurance Advisory • Tamil Nadu
-                </span>
-              </div>
+              <p className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-gold-soft">
+                Elite Wealth &amp; Insurance Advisory &bull; Tamil Nadu
+              </p>
 
-              {/* Bold Title */}
-              <h1 className="mt-5 text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-white">
+              {/* Dignified Display Title */}
+              <h1 className="mt-4 text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-white">
                 Secure today. <br />
-                <span className="text-gold-gradient">Grow tomorrow.</span>
+                <span className="text-gold-soft">Grow tomorrow.</span>
               </h1>
 
-              {/* Refined Subtitle */}
+              {/* Calibrated Lead Paragraph */}
               <p className="mt-5 max-w-xl text-base sm:text-lg text-ink-muted leading-relaxed mx-auto lg:mx-0">
                 Honest, certified insurance guidance for families, salaried professionals, and
                 business owners across Tamil Nadu.
               </p>
 
-              {/* Brand Mantra Pill Strip */}
-              <div className="mt-5 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs font-bold uppercase tracking-widest text-gold-soft">
+              {/* Quiet Brand Cadence */}
+              <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs font-semibold uppercase tracking-wider text-ink-muted/80">
                 <span>Understand</span>
-                <span className="text-gold/40">•</span>
+                <span className="text-white/20">&bull;</span>
                 <span>Guide</span>
-                <span className="text-gold/40">•</span>
+                <span className="text-white/20">&bull;</span>
                 <span>Support</span>
-                <span className="text-gold/40">•</span>
+                <span className="text-white/20">&bull;</span>
                 <span>Grow</span>
               </div>
 
-              {/* CTA Group */}
-              <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-3.5">
+              {/* Action Pair */}
+              <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 <Link
                   to="/services"
-                  className="btn-gold shadow-lg shadow-gold/25 text-sm sm:text-base px-6 py-3.5"
+                  className="btn-gold px-7 py-3.5 text-sm sm:text-base font-bold text-ink rounded-full transition-transform hover:-translate-y-0.5"
                 >
                   Explore Plans <ArrowRight className="size-4" />
                 </Link>
                 <button
                   type="button"
                   onClick={openCallbackModal}
-                  className="btn-outline-gold text-sm sm:text-base px-6 py-3.5 flex items-center gap-2"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-white/90 hover:text-gold border border-white/15 hover:border-gold/50 rounded-full transition-all"
                 >
-                  <Phone className="size-4" /> Request a Free Callback
+                  <Phone className="size-4 text-gold" /> Request a Free Callback
                 </button>
               </div>
 
               {/* Live Advisor Hotline Indicator */}
-              <div className="mt-5 flex items-center justify-center lg:justify-start gap-2.5 text-xs text-ink-muted">
-                <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="mt-6 flex items-center justify-center lg:justify-start gap-2.5 text-xs text-ink-muted">
+                <span className="size-2 rounded-full bg-emerald-400" />
                 <span>
                   Direct Helpline:{" "}
                   <a
@@ -129,26 +125,23 @@ function Index() {
               </div>
             </div>
 
-            {/* Right Column: Interactive Plan Navigator Card */}
+            {/* Right Column: Soft Ambient Cover Showcase */}
             <div className="mt-12 lg:mt-0 lg:col-span-5">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                {/* Ambient glow behind card */}
-                <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-gold/30 via-gold/10 to-transparent blur-xl opacity-75" />
-
-                <div className="relative rounded-3xl border border-gold/35 bg-ink-soft/90 p-6 sm:p-7 backdrop-blur-xl shadow-2xl">
+                <div className="rounded-3xl border border-white/10 bg-ink-soft/85 p-6 sm:p-7 backdrop-blur-md shadow-xl">
                   <div className="flex items-center justify-between border-b border-white/10 pb-4">
                     <div>
-                      <p className="text-[0.7rem] font-bold uppercase tracking-wider text-gold">
+                      <p className="text-[0.72rem] font-bold uppercase tracking-wider text-gold">
                         Direct Plan Selector
                       </p>
                       <h3 className="mt-0.5 text-lg font-bold text-white">Choose Your Cover</h3>
                     </div>
-                    <span className="rounded-full bg-gold/15 px-2.5 py-1 text-[0.7rem] font-bold text-gold">
+                    <span className="rounded-full bg-gold/15 px-3 py-1 text-xs font-semibold text-gold">
                       Free Advisory
                     </span>
                   </div>
 
-                  {/* 6 Interactive Service Category Chips */}
+                  {/* 6 Category Items */}
                   <div className="mt-4 grid grid-cols-2 gap-2.5">
                     {SERVICES.map((s, idx) => {
                       const Icon = ICONS[idx] ?? Shield;
@@ -157,7 +150,7 @@ function Index() {
                           key={s.slug}
                           to="/services/$slug"
                           params={{ slug: s.slug }}
-                          className="group flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/5 p-2.5 transition-all hover:border-gold/50 hover:bg-gold/10"
+                          className="group flex items-center gap-2.5 rounded-xl border border-white/5 bg-white/[0.03] p-2.5 transition-all hover:border-gold/40 hover:bg-gold/10"
                         >
                           <span className="grid size-8 place-items-center rounded-lg bg-gold/15 text-gold group-hover:bg-gold group-hover:text-ink transition-colors shrink-0">
                             <Icon className="size-4" />
@@ -166,7 +159,7 @@ function Index() {
                             <p className="text-xs font-semibold text-white truncate group-hover:text-gold transition-colors">
                               {s.name}
                             </p>
-                            <p className="text-[0.65rem] text-ink-muted truncate">Explore &rarr;</p>
+                            <p className="text-[0.68rem] text-ink-muted truncate">Explore &rarr;</p>
                           </div>
                         </Link>
                       );
@@ -178,12 +171,12 @@ function Index() {
                     <button
                       type="button"
                       onClick={openCallbackModal}
-                      className="w-full flex items-center justify-center gap-2 rounded-xl bg-gold/20 hover:bg-gold hover:text-ink py-2.5 px-4 text-xs font-bold text-gold border border-gold/40 transition-all shadow-sm"
+                      className="w-full flex items-center justify-center gap-2 rounded-xl bg-gold hover:bg-gold-soft py-3 px-4 text-xs sm:text-sm font-bold text-ink transition-all shadow-sm"
                     >
                       <Phone className="size-3.5" /> Speak with an Advisor in 60s
                     </button>
-                    <p className="mt-2 text-center text-[0.68rem] text-ink-muted">
-                      &bull; Zero commission markup &bull; 100% Cashless network support
+                    <p className="mt-2 text-center text-[0.7rem] text-ink-muted">
+                      Zero commission markup &bull; 100% Cashless network support
                     </p>
                   </div>
                 </div>
@@ -192,34 +185,34 @@ function Index() {
           </div>
 
           {/* Quick Trust Credentials Grid */}
-          <div className="mt-14 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 border-t border-white/10 pt-8 text-left">
-            <div className="flex items-center gap-3.5 rounded-2xl border border-white/5 bg-white/[0.03] p-4 backdrop-blur-sm">
-              <div className="grid size-11 place-items-center rounded-xl bg-gold/15 text-gold shrink-0">
+          <div className="mt-14 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 border-t border-white/10 pt-8 text-left">
+            <div className="flex items-start gap-3.5">
+              <div className="grid size-10 place-items-center rounded-xl bg-gold/15 text-gold shrink-0">
                 <ShieldCheck className="size-5" />
               </div>
               <div>
                 <p className="text-sm font-bold text-white">IRDAI-Authorized Partners</p>
-                <p className="text-xs text-ink-muted">Tata AIA, Star, HDFC Life &amp; more</p>
+                <p className="mt-0.5 text-xs text-ink-muted">Tata AIA, Star, HDFC Life &amp; more</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3.5 rounded-2xl border border-white/5 bg-white/[0.03] p-4 backdrop-blur-sm">
-              <div className="grid size-11 place-items-center rounded-xl bg-gold/15 text-gold shrink-0">
+            <div className="flex items-start gap-3.5">
+              <div className="grid size-10 place-items-center rounded-xl bg-gold/15 text-gold shrink-0">
                 <HeartPulse className="size-5" />
               </div>
               <div>
                 <p className="text-sm font-bold text-white">100% Claim Assistance</p>
-                <p className="text-xs text-ink-muted">Complete paperwork &amp; insurer follow-up</p>
+                <p className="mt-0.5 text-xs text-ink-muted">Complete paperwork &amp; insurer follow-up</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3.5 rounded-2xl border border-white/5 bg-white/[0.03] p-4 backdrop-blur-sm">
-              <div className="grid size-11 place-items-center rounded-xl bg-gold/15 text-gold shrink-0">
+            <div className="flex items-start gap-3.5">
+              <div className="grid size-10 place-items-center rounded-xl bg-gold/15 text-gold shrink-0">
                 <Users className="size-5" />
               </div>
               <div>
                 <p className="text-sm font-bold text-white">Tamil &amp; English Advisory</p>
-                <p className="text-xs text-ink-muted">Friendly localized support across TN</p>
+                <p className="mt-0.5 text-xs text-ink-muted">Friendly localized support across TN</p>
               </div>
             </div>
           </div>
