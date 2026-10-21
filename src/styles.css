@@ -1,0 +1,244 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Montserrat", "Poppins", system-ui, sans-serif;
+  --font-sans: "Poppins", "Montserrat", system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-ink-muted: var(--ink-muted);
+  --color-success: var(--success);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.985 0.004 85);
+  --foreground: oklch(0.17 0.005 80);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.17 0.005 80);
+  --popover: oklch(0.14 0.004 80);
+  --popover-foreground: oklch(0.96 0.01 85);
+  --primary: oklch(0.74 0.12 80);
+  --primary-foreground: oklch(0.14 0.004 80);
+  --secondary: oklch(0.95 0.012 85);
+  --secondary-foreground: oklch(0.17 0.005 80);
+  --muted: oklch(0.95 0.008 85);
+  --muted-foreground: oklch(0.45 0.01 80);
+  --accent: oklch(0.93 0.04 85);
+  --accent-foreground: oklch(0.17 0.005 80);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.89 0.012 85);
+  --input: oklch(0.86 0.015 85);
+  --ring: oklch(0.74 0.12 80);
+  --gold: oklch(0.76 0.125 80);
+  --gold-soft: oklch(0.86 0.08 85);
+  --ink: oklch(0.13 0.004 80);
+  --ink-soft: oklch(0.19 0.006 80);
+  --ink-foreground: oklch(0.96 0.01 85);
+  --ink-muted: oklch(0.7 0.012 85);
+  --success: oklch(0.6 0.13 155);
+  --gradient-gold: linear-gradient(135deg, oklch(0.84 0.1 88), oklch(0.7 0.13 72));
+  --gradient-ink: radial-gradient(
+    ellipse at top right,
+    oklch(0.24 0.02 80),
+    oklch(0.12 0.004 80) 60%
+  );
+  --shadow-gold: 0 12px 40px -12px color-mix(in oklab, var(--gold) 55%, transparent);
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 5%), 0 12px 32px -16px oklch(0 0 0 / 18%);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --shadow-card-hover:
+    0 16px 36px -10px color-mix(in oklab, var(--gold) 35%, transparent),
+    0 4px 16px oklch(0 0 0 / 6%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+}
+
+@utility text-gold-gradient {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility bg-gold-gradient {
+  background: var(--gradient-gold);
+}
+@utility bg-ink-gradient {
+  background: var(--gradient-ink);
+}
+@utility shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+@utility shadow-card-hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+@utility btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  background: var(--gradient-gold);
+  color: var(--ink);
+  box-shadow: var(--shadow-gold);
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+  &:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+  }
+  &:disabled {
+    opacity: 0.6;
+    transform: none;
+  }
+}
+@utility btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  transition:
+    background 0.2s,
+    color 0.2s;
+  &:hover {
+    background: var(--gold);
+    color: var(--ink);
+  }
+}
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+@utility field {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--input);
+  background: var(--card);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--foreground);
+  &:focus {
+    outline: 2px solid var(--ring);
+    outline-offset: 1px;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@utility animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+@utility card-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 600ms var(--ease-out),
+    transform 700ms var(--ease-expo);
+  will-change: transform, opacity;
+}
+@utility is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@utility card-interactive {
+  transition:
+    transform 260ms var(--ease-out),
+    border-color 220ms ease,
+    box-shadow 260ms ease;
+  will-change: transform, box-shadow;
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .card-interactive:hover {
+    transform: none !important;
+  }
+}

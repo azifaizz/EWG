@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ewg-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2DA86" />
+      <stop offset="45%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA7C11" />
+    </linearGradient>
+    <radialGradient id="ewg-ink" cx="30%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#222834" />
+      <stop offset="100%" stop-color="#0E121A" />
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#ewg-ink)" stroke="url(#ewg-gold)" stroke-width="4" />
+  <path d="M42 34 h44 c3 0 5 2 5 5 v8 c0 3-2 5-5 5 H58 v16 h24 c3 0 5 2 5 5 v8 c0 3-2 5-5 5 H58 v18 h28 c3 0 5 2 5 5 v8 c0 3-2 5-5 5 H42 c-4 0-7-3-7-7 V41 c0-4 3-7 7-7 z" fill="url(#ewg-gold)" />
+</svg>
