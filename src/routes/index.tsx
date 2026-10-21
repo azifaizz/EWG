@@ -234,150 +234,222 @@ function Index() {
       </section>
 
       {/* Services - What we do */}
-      <Section>
-        <p className="eyebrow">What we do</p>
-        <div className="mt-3">
-          <h2 className="text-4xl md:text-5xl">Protection for every stage of life</h2>
-          <p className="mt-2 text-base text-muted-foreground">
-            Comprehensive insurance guidance tailored for families and businesses across Tamil Nadu.
-          </p>
-        </div>
+      <section className="py-20 sm:py-28 bg-background">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground leading-[1.12]">
+              Protection for every stage of life
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+              Comprehensive insurance guidance tailored for families and businesses across Tamil Nadu.
+            </p>
+          </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s, i) => {
-            const Icon = ICONS[i] ?? Shield;
-            return (
-              <Link
-                key={s.slug}
-                to="/services/$slug"
-                params={{ slug: s.slug }}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card p-7 text-card-foreground shadow-card card-interactive transition-all"
-              >
-                {/* Gold gradient accent line along top border */}
-                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
-                <span className="grid size-12 place-items-center rounded-xl bg-ink text-gold shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-gold-gradient group-hover:text-ink">
-                  <Icon className="size-6 transition-transform duration-300 group-hover:scale-105" />
-                </span>
-                <h3 className="mt-5 text-2xl font-semibold text-foreground transition-colors duration-200 group-hover:text-gold">
-                  {s.name}
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.tagline}</p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground transition-colors duration-200 group-hover:text-gold">
-                  Learn more{" "}
-                  <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1.5" />
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </Section>
-
-      {/* Why EWG */}
-      <section className="bg-ink-gradient text-ink-foreground">
-        <Section>
-          <p className="eyebrow">Why choose EWG</p>
-          <h2 className="mt-3 max-w-2xl text-4xl md:text-5xl">
-            Advice that puts your family first
-          </h2>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              [
-                Scale,
-                "Unbiased comparison",
-                "We compare plans across authorised partners to find what truly fits.",
-              ],
-              [
-                Users,
-                "Local & personal",
-                "Advisors who speak Tamil and English and understand your needs.",
-              ],
-              [
-                Headphones,
-                "Claim support",
-                "We stand beside you when it matters most — at claim time.",
-              ],
-              [
-                ShieldCheck,
-                "Transparent",
-                "No hidden charges. Clear explanations, in plain language.",
-              ],
-            ].map(([Icon, t, d]) => {
-              const I = Icon as typeof Scale;
+          <div className="mt-12 sm:mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {SERVICES.map((s, i) => {
+              const Icon = ICONS[i] ?? Shield;
               return (
-                <div key={t as string} className="border-l border-gold/40 pl-6">
-                  <I className="size-7 text-gold" />
-                  <h3 className="mt-4 text-xl">{t as string}</h3>
-                  <p className="mt-2 text-sm text-ink-muted">{d as string}</p>
-                </div>
+                <Link
+                  key={s.slug}
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
+                  className="group relative flex flex-col justify-between rounded-2xl bg-card p-7 sm:p-8 transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div>
+                    <div className="flex items-center gap-3.5">
+                      <Icon className="size-5 text-gold shrink-0 group-hover:scale-110 transition-transform" />
+                      <h3 className="text-xl sm:text-2xl font-bold text-foreground transition-colors duration-200 group-hover:text-gold">
+                        {s.name}
+                      </h3>
+                    </div>
+                    <p className="mt-3.5 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                      {s.tagline}
+                    </p>
+                  </div>
+
+                  <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-foreground transition-colors duration-200 group-hover:text-gold">
+                    <span>Explore plan</span>
+                    <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+                  </div>
+                </Link>
               );
             })}
           </div>
-        </Section>
+        </div>
+      </section>
+
+      {/* Why EWG */}
+      <section className="bg-ink text-ink-foreground py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-16 lg:items-start">
+            <div className="lg:col-span-5">
+              <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-[1.12]">
+                Advice that puts your family first
+              </h2>
+              <p className="mt-5 text-base sm:text-lg text-ink-muted leading-relaxed">
+                We don't sell policies to hit sales quotas. As independent advisors across Tamil Nadu,
+                our loyalty is to your family's financial security, claim dignity, and peace of mind.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4 text-xs sm:text-sm font-semibold text-gold">
+                <span>Personalized Advisory</span>
+                <span className="text-white/20">&bull;</span>
+                <span>Zero Commission Bias</span>
+                <span className="text-white/20">&bull;</span>
+                <span>IRDAI Partners</span>
+              </div>
+            </div>
+
+            <div className="mt-12 lg:mt-0 lg:col-span-7 grid gap-5 sm:grid-cols-2">
+              {[
+                [
+                  Scale,
+                  "Unbiased comparison",
+                  "We compare plans across authorised partners to find what truly fits.",
+                ],
+                [
+                  Users,
+                  "Local & personal",
+                  "Advisors who speak Tamil and English and understand your needs.",
+                ],
+                [
+                  Headphones,
+                  "Claim support",
+                  "We stand beside you when it matters most — at claim time.",
+                ],
+                [
+                  ShieldCheck,
+                  "Transparent",
+                  "No hidden charges. Clear explanations, in plain language.",
+                ],
+              ].map(([Icon, t, d]) => {
+                const I = Icon as typeof Scale;
+                return (
+                  <div
+                    key={t as string}
+                    className="rounded-2xl bg-ink-soft/70 p-6 sm:p-7 backdrop-blur-sm"
+                  >
+                    <div className="flex items-center gap-3">
+                      <I className="size-5 text-gold shrink-0" />
+                      <h3 className="text-lg sm:text-xl font-bold text-white">{t as string}</h3>
+                    </div>
+                    <p className="mt-3 text-sm sm:text-base text-ink-muted leading-relaxed">
+                      {d as string}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* How it works */}
-      <section className="bg-secondary">
-        <Section>
-          <p className="eyebrow">How EWG works</p>
-          <h2 className="mt-3 text-4xl md:text-5xl">Four simple steps</h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-4">
+      <section className="bg-secondary/40 py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
+              Four simple steps
+            </h2>
+            <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
+              From your initial conversation to claim day, our guidance is straightforward, personal,
+              and reliable.
+            </p>
+          </div>
+
+          <div className="mt-12 sm:mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["Understand", "We listen to your goals, family and budget."],
-              ["Guide", "We compare and recommend suitable plans."],
-              ["Support", "We handle paperwork, renewals and claims."],
-              ["Grow", "We review regularly as your life evolves."],
-            ].map(([t, d], i) => (
-              <div key={t} className="rounded-2xl bg-card p-7 shadow-card">
-                <span className="font-display text-5xl text-gold-gradient">0{i + 1}</span>
-                <h3 className="mt-4 text-2xl">{t}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{d}</p>
+              ["1. Understand", "We listen to your goals, family and budget."],
+              ["2. Guide", "We compare and recommend suitable plans."],
+              ["3. Support", "We handle paperwork, renewals and claims."],
+              ["4. Grow", "We review regularly as your life evolves."],
+            ].map(([t, d]) => (
+              <div
+                key={t}
+                className="relative rounded-2xl bg-card p-7 sm:p-8 transition-transform duration-300 hover:-translate-y-1"
+              >
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground">{t}</h3>
+                <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  {d}
+                </p>
               </div>
             ))}
           </div>
-        </Section>
+        </div>
       </section>
 
-      {/* CTA */}
-      <Section>
-        <div className="grid gap-10 overflow-hidden rounded-3xl bg-ink p-8 text-ink-foreground md:p-14 lg:grid-cols-2">
-          <div>
-            <p className="eyebrow">Talk to an expert</p>
-            <h2 className="mt-3 text-4xl md:text-5xl">Get a personalised quote — free.</h2>
-            <p className="mt-4 text-ink-muted">
-              Share a few details and an EWG advisor will call you with options tailored to you.
-            </p>
-            <a
-              href={CONTACT.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline-gold mt-8"
-            >
-              Chat on WhatsApp
-            </a>
-          </div>
-          <div className="rounded-2xl bg-card p-6 text-card-foreground">
-            <LeadForm type="quote" />
+      {/* CTA / Talk to an expert */}
+      <section className="py-20 sm:py-28 bg-background">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="relative overflow-hidden rounded-3xl bg-ink p-8 sm:p-12 lg:p-16 text-ink-foreground lg:grid lg:grid-cols-12 lg:gap-12 lg:items-center">
+            <div className="lg:col-span-6">
+              <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-[1.15]">
+                Get a personalised quote — free.
+              </h2>
+              <p className="mt-4 text-base sm:text-lg text-ink-muted leading-relaxed max-w-xl">
+                Share a few details and an EWG advisor will call you with options tailored to you.
+              </p>
+
+              <div className="mt-8 space-y-3 text-sm text-ink-muted">
+                <div className="flex items-center gap-2.5">
+                  <ShieldCheck className="size-4 text-gold shrink-0" />
+                  <span>100% free consultation with zero purchase obligation</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <ShieldCheck className="size-4 text-gold shrink-0" />
+                  <span>Direct comparative quotes from IRDAI-approved insurers</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <ShieldCheck className="size-4 text-gold shrink-0" />
+                  <span>Dedicated claims advisory throughout the life of your policy</span>
+                </div>
+              </div>
+
+              <div className="mt-9">
+                <a
+                  href={CONTACT.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline-gold inline-flex items-center gap-2 px-6 py-3.5 text-sm sm:text-base"
+                >
+                  Chat on WhatsApp &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-10 lg:mt-0 lg:col-span-6 rounded-2xl bg-card p-6 sm:p-8 text-card-foreground shadow-2xl">
+              <LeadForm type="quote" />
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* FAQ */}
-      <Section className="max-w-4xl">
-        <p className="eyebrow text-center">FAQs</p>
-        <h2 className="mt-3 text-center text-4xl">Common questions</h2>
-        <div className="mt-10">
-          <FaqList limit={4} />
+      <section className="py-20 sm:py-28 bg-secondary/30">
+        <div className="mx-auto max-w-4xl px-5 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
+              Common questions
+            </h2>
+            <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
+              Clear answers to help you make informed decisions about your insurance.
+            </p>
+          </div>
+
+          <div className="mt-12 sm:mt-16">
+            <FaqList limit={4} />
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              to="/faqs"
+              className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-foreground hover:text-gold underline decoration-gold underline-offset-4 transition-colors"
+            >
+              <span>See all FAQs</span>
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
         </div>
-        <div className="mt-6 text-center">
-          <Link
-            to="/faqs"
-            className="text-sm font-semibold underline decoration-gold underline-offset-4"
-          >
-            See all FAQs
-          </Link>
-        </div>
-      </Section>
+      </section>
     </>
   );
 }

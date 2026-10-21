@@ -7,18 +7,6 @@ const STORAGE_KEY = "ewg_initial_callback_dismissed";
 export function InitialCallbackModal() {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    try {
-      const dismissed = sessionStorage.getItem(STORAGE_KEY);
-      if (dismissed) return undefined;
-    } catch {
-      // Ignore storage errors
-    }
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 300);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     function handleOpen() {
