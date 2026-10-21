@@ -60,127 +60,66 @@ function Index() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/95 via-ink/85 to-ink" />
 
-        <div className="relative mx-auto max-w-7xl px-5 pt-16 pb-20 sm:pt-24 sm:pb-28 lg:px-8">
-          <div className="lg:grid lg:grid-cols-12 lg:gap-14 lg:items-center">
-            {/* Left Column: Soft Luxury Editorial Presentation */}
-            <div className="text-center lg:text-left lg:col-span-7">
-              <p className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-gold-soft">
-                Elite Wealth &amp; Insurance Advisory &bull; Tamil Nadu
-              </p>
+        <div className="relative mx-auto max-w-7xl px-5 pt-20 pb-20 sm:pt-28 sm:pb-28 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-gold-soft">
+              Elite Wealth &amp; Insurance Advisory &bull; Tamil Nadu
+            </p>
 
-              {/* Dignified Display Title */}
-              <h1 className="mt-4 text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-white">
-                Secure today. <br />
-                <span className="text-gold-soft">Grow tomorrow.</span>
-              </h1>
+            {/* Dignified Display Title */}
+            <h1 className="mt-4 text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-white">
+              Secure today. <br />
+              <span className="text-gold-soft">Grow tomorrow.</span>
+            </h1>
 
-              {/* Calibrated Lead Paragraph */}
-              <p className="mt-5 max-w-xl text-base sm:text-lg text-ink-muted leading-relaxed mx-auto lg:mx-0">
-                Honest, certified insurance guidance for families, salaried professionals, and
-                business owners across Tamil Nadu.
-              </p>
+            {/* Calibrated Lead Paragraph */}
+            <p className="mt-6 max-w-2xl text-base sm:text-lg text-ink-muted leading-relaxed">
+              Honest, certified insurance guidance for families, salaried professionals, and
+              business owners across Tamil Nadu.
+            </p>
 
-              {/* Quiet Brand Cadence */}
-              <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs font-semibold uppercase tracking-wider text-ink-muted/80">
-                <span>Understand</span>
-                <span className="text-white/20">&bull;</span>
-                <span>Guide</span>
-                <span className="text-white/20">&bull;</span>
-                <span>Support</span>
-                <span className="text-white/20">&bull;</span>
-                <span>Grow</span>
-              </div>
-
-              {/* Action Pair */}
-              <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                <Link
-                  to="/services"
-                  className="btn-gold px-7 py-3.5 text-sm sm:text-base font-bold text-ink rounded-full transition-transform hover:-translate-y-0.5"
-                >
-                  Explore Plans <ArrowRight className="size-4" />
-                </Link>
-                <button
-                  type="button"
-                  onClick={openCallbackModal}
-                  className="inline-flex items-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-white/90 hover:text-gold border border-white/15 hover:border-gold/50 rounded-full transition-all"
-                >
-                  <Phone className="size-4 text-gold" /> Request a Free Callback
-                </button>
-              </div>
-
-              {/* Live Advisor Hotline Indicator */}
-              <div className="mt-6 flex items-center justify-center lg:justify-start gap-2.5 text-xs text-ink-muted">
-                <span className="size-2 rounded-full bg-emerald-400" />
-                <span>
-                  Direct Helpline:{" "}
-                  <a
-                    href={CONTACT.phoneHref}
-                    className="text-white font-semibold hover:text-gold transition-colors"
-                  >
-                    {CONTACT.phone}
-                  </a>
-                </span>
-                <span className="text-white/20">|</span>
-                <span>Tamil &amp; English Advisory</span>
-              </div>
+            {/* Quiet Brand Cadence */}
+            <div className="mt-6 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wider text-ink-muted/80">
+              <span>Understand</span>
+              <span className="text-white/20">&bull;</span>
+              <span>Guide</span>
+              <span className="text-white/20">&bull;</span>
+              <span>Support</span>
+              <span className="text-white/20">&bull;</span>
+              <span>Grow</span>
             </div>
 
-            {/* Right Column: Soft Ambient Cover Showcase */}
-            <div className="mt-12 lg:mt-0 lg:col-span-5">
-              <div className="relative mx-auto max-w-md lg:max-w-none">
-                <div className="rounded-3xl border border-white/10 bg-ink-soft/85 p-6 sm:p-7 backdrop-blur-md shadow-xl">
-                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                    <div>
-                      <p className="text-[0.72rem] font-bold uppercase tracking-wider text-gold">
-                        Direct Plan Selector
-                      </p>
-                      <h3 className="mt-0.5 text-lg font-bold text-white">Choose Your Cover</h3>
-                    </div>
-                    <span className="rounded-full bg-gold/15 px-3 py-1 text-xs font-semibold text-gold">
-                      Free Advisory
-                    </span>
-                  </div>
+            {/* Action Pair */}
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Link
+                to="/services"
+                className="btn-gold px-7 py-3.5 text-sm sm:text-base font-bold text-ink rounded-full transition-transform hover:-translate-y-0.5"
+              >
+                Explore Plans <ArrowRight className="size-4" />
+              </Link>
+              <button
+                type="button"
+                onClick={openCallbackModal}
+                className="inline-flex items-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-white/90 hover:text-gold border border-white/15 hover:border-gold/50 rounded-full transition-all"
+              >
+                <Phone className="size-4 text-gold" /> Request a Free Callback
+              </button>
+            </div>
 
-                  {/* 6 Category Items */}
-                  <div className="mt-4 grid grid-cols-2 gap-2.5">
-                    {SERVICES.map((s, idx) => {
-                      const Icon = ICONS[idx] ?? Shield;
-                      return (
-                        <Link
-                          key={s.slug}
-                          to="/services/$slug"
-                          params={{ slug: s.slug }}
-                          className="group flex items-center gap-2.5 rounded-xl border border-white/5 bg-white/[0.03] p-2.5 transition-all hover:border-gold/40 hover:bg-gold/10"
-                        >
-                          <span className="grid size-8 place-items-center rounded-lg bg-gold/15 text-gold group-hover:bg-gold group-hover:text-ink transition-colors shrink-0">
-                            <Icon className="size-4" />
-                          </span>
-                          <div className="min-w-0">
-                            <p className="text-xs font-semibold text-white truncate group-hover:text-gold transition-colors">
-                              {s.name}
-                            </p>
-                            <p className="text-[0.68rem] text-ink-muted truncate">Explore &rarr;</p>
-                          </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-
-                  {/* Quick Callback Trigger inside card */}
-                  <div className="mt-5 pt-4 border-t border-white/10">
-                    <button
-                      type="button"
-                      onClick={openCallbackModal}
-                      className="w-full flex items-center justify-center gap-2 rounded-xl bg-gold hover:bg-gold-soft py-3 px-4 text-xs sm:text-sm font-bold text-ink transition-all shadow-sm"
-                    >
-                      <Phone className="size-3.5" /> Speak with an Advisor in 60s
-                    </button>
-                    <p className="mt-2 text-center text-[0.7rem] text-ink-muted">
-                      Zero commission markup &bull; 100% Cashless network support
-                    </p>
-                  </div>
-                </div>
-              </div>
+            {/* Live Advisor Hotline Indicator */}
+            <div className="mt-6 flex items-center gap-2.5 text-xs text-ink-muted">
+              <span className="size-2 rounded-full bg-emerald-400" />
+              <span>
+                Direct Helpline:{" "}
+                <a
+                  href={CONTACT.phoneHref}
+                  className="text-white font-semibold hover:text-gold transition-colors"
+                >
+                  {CONTACT.phone}
+                </a>
+              </span>
+              <span className="text-white/20">|</span>
+              <span>Tamil &amp; English Advisory</span>
             </div>
           </div>
 
