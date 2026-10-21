@@ -129,7 +129,7 @@ export function LeadForm({
             placeholder="e.g. 98765 43210"
           />
           <Err k="phone" />
-          <p className="mt-1 flex items-center gap-1 text-[0.68rem] text-muted-foreground">
+          <p className="mt-1 flex items-center gap-1 text-xs text-muted-foreground">
             <ShieldCheck className="size-3 text-gold/80" /> Zero spam. We only call once to
             understand your need.
           </p>
@@ -247,7 +247,7 @@ export function LeadForm({
           </button>
         )}
       </div>
-      <p className={`text-[0.68rem] ${dark ? "text-ink-muted" : "text-muted-foreground"}`}>
+      <p className={`text-xs ${dark ? "text-ink-muted" : "text-muted-foreground"}`}>
         By submitting, you agree to be contacted by EWG via call, SMS or WhatsApp.
       </p>
     </form>

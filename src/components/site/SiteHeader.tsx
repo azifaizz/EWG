@@ -38,8 +38,8 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-gold/15 bg-ink/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-8">
-        <Link to="/" className="py-4" onClick={close}>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link to="/" className="py-3.5 sm:py-4" onClick={close}>
           <Logo />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
@@ -65,15 +65,15 @@ export function SiteHeader() {
           Get Started
         </Link>
         <button
-          className="p-2 text-ink-foreground lg:hidden"
+          className="grid size-11 place-items-center rounded-lg text-ink-foreground hover:text-gold transition-colors lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
-          {open ? <X /> : <Menu />}
+          {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
       </div>
       {open && (
-        <div className="max-h-[calc(100vh-72px)] overflow-y-auto border-t border-gold/15 bg-ink px-5 pb-6 lg:hidden">
+        <div className="max-h-[calc(100vh-72px)] overflow-y-auto border-t border-gold/15 bg-ink px-4 sm:px-6 pb-6 lg:hidden">
           {(
             [
               ["Home", "/"],
